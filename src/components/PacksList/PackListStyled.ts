@@ -15,6 +15,9 @@ export const PackItem = styled.li`
   text-align: center;
 
   border-radius: 10px;
+
+  box-shadow: 0 8px 32px rgba(163, 177, 198, 0.25);
+
   &:not(:last-of-type) {
     margin-bottom: 32px;
   }
@@ -40,7 +43,7 @@ export const PackItem = styled.li`
 `;
 
 export const SubList = styled.ul`
-margin-bottom: 32px;
+  margin-bottom: 32px;
 
   & > li:not(:first-of-type) {
     padding-top: 12px;
@@ -57,7 +60,7 @@ export const Tariff = styled.li<Partial<Props>>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center   ;
+  justify-content: center;
 
   padding-bottom: 32px;
 
@@ -77,19 +80,20 @@ export const Tariff = styled.li<Partial<Props>>`
 `;
 
 export const PackBtn = styled.button<Partial<Props>>`
-width: 100%;
+  width: 100%;
 
-padding-top: 14px;
-padding-bottom: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-font-size: 13px;
-font-weight: 700;
-letter-spacing: 1.39px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.39px;
 
-background: ${({even}) => even ? "#fff" : "linear-gradient(to bottom, #a2a7f0, #696edd)"};
-color: ${({even}) => even ? "#6D72DE" : "#fff"};
+  background: ${({ even }) =>
+    even ? "#fff" : "linear-gradient(to bottom, #a2a7f0, #696edd)"};
+  color: ${({ even }) => (even ? "#6D72DE" : "#fff")};
 
-border-radius: 8px;
-`
+  border-radius: 8px;
+`;
