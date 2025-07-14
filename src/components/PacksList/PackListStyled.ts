@@ -4,7 +4,19 @@ type Props = {
   even: string;
 };
 
-export const PackListStyled = styled.ul``;
+export const PackListStyled = styled.ul`
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 73%;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+`;
 
 export const PackItem = styled.li`
   padding-top: 32px;
@@ -20,6 +32,10 @@ export const PackItem = styled.li`
 
   &:not(:last-of-type) {
     margin-bottom: 32px;
+
+    @media (min-width: 1280px) {
+      margin-bottom: 0;
+    }
   }
 
   &:nth-of-type(2n + 1) {
@@ -32,6 +48,11 @@ export const PackItem = styled.li`
     background: linear-gradient(to bottom, #a2a7f0, #696edd);
 
     color: #fff;
+
+    @media (min-width: 1280px) {
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
   }
 
   & > h3 {
@@ -92,8 +113,25 @@ export const PackBtn = styled.button<Partial<Props>>`
   letter-spacing: 1.39px;
 
   background: ${({ even }) =>
-    even ? "#fff" : "linear-gradient(to bottom, #a2a7f0, #696edd)"};
+    even ? "#fff" : "linear-gradient(to bottom, #242425ff, #696edd)"};
   color: ${({ even }) => (even ? "#6D72DE" : "#fff")};
 
   border-radius: 8px;
+
+  @media (min-width: 1280px) {
+    transition: all 0.3s;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: transparent;
+      color: ${({ even }) => (even ? "#fff" : "#6D72DE")};
+
+      border: 1px solid ${({ even }) => (even ? "#fff" : "#6D72DE")};
+
+      cursor: pointer;
+
+      transition: all 0.3s;
+    }
+  }
 `;
