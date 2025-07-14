@@ -75,3 +75,21 @@ export const Tariff = styled.li<Partial<Props>>`
     letter-spacing: -1.2px;
   }
 `;
+
+export const PackBtn = styled.button<Partial<Props>>`
+width: 100%;
+
+padding-top: 14px;
+padding-bottom: 14px;
+
+text-transform: uppercase;
+
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 1.39px;
+
+background: ${({even}) => even ? "#fff" : "linear-gradient(to bottom, #a2a7f0, #696edd)"};
+color: ${({even}) => even ? "#6D72DE" : "#fff"};
+
+border-radius: 8px;
+`

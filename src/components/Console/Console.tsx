@@ -1,10 +1,11 @@
+import { YearType } from "@/utils/types";
 import * as SC from "./ConsoleStyled"
 
-const Console: React.FC = () => {
+const Console: React.FC<YearType> = ({isYear, toggleYear}) => {
   return (
-    <SC.ConsoleCon>
+    <SC.ConsoleCon isYear={isYear}>
       <span>Annually</span>
-      <button type="button"></button>
+      <button type="button" onClick={toggleYear} ></button>
       <span>Monthly</span>
     </SC.ConsoleCon>
   );
